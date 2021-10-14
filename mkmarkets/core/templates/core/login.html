@@ -1,0 +1,27 @@
+{% extends "core/base.html" %}
+{% block content %}
+
+<section class="form-wrapper">
+    <form action="" method="post">
+        {% csrf_token %}
+        <h3 class="text-center text-muted">
+            MKMARKETS
+        </h3>
+        {{ form }}
+        <div class="form-group mt-4">
+            <input type="submit" value="Login" class="btn btn-primary btn-block">
+        </div>
+        <div class="form-group">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-sm-12 col-md-6">
+                    <a href="" class="nav-link text-center">Forgot Password?</a>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <a href="" class="nav-link text-center">Signup</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
+
+{% endblock content %}

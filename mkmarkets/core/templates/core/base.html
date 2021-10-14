@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style/style.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/bootstrap-5.0.1/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/bootstrap-5.0.1/css/bootstrap.min.css.map' %}">
+
+    <script src="{% static 'vendors/bootstrap-5.0.1/js/bootstrap.min.js' %}" defer></script>
+    <script src="{% static 'vendors/bootstrap-5.0.1/js/bootstrap.js.map' %}" defer></script>
+    <title>
+        {% if title %}
+            { title }
+        {% else %}
+            MKMARKETS
+        {% endif %}
+    </title>
+</head>
+<body>
+    {% block content %}{% endblock content %}
+</body>
+</html>
