@@ -30,6 +30,14 @@
           flex-direction: column;
   width: 60vw;
   height: 30vh;
+  padding: 30px;
+  border-radius: 15px;
+  -webkit-box-shadow: 1px 20px 20px #e6e6e6, -1px -20px 20px #e6e6e6;
+          box-shadow: 1px 20px 20px #e6e6e6, -1px -20px 20px #e6e6e6;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #fff;
 }
 
 .form-wrapper form input {
@@ -44,9 +52,18 @@
   outline: none;
 }
 
+.form-wrapper form input[type="submit"] {
+  padding: 0;
+  color: #ffffff;
+}
+
 .form-wrapper form label {
   margin-top: 20px;
   margin-bottom: 6px;
+}
+
+.form-wrapper form li {
+  color: red !important;
 }
 
 @media (min-width: 1000px) {
@@ -54,3 +71,13 @@
     width: 30vw;
   }
 }
+
+.bg-teal {
+  background-color: #43cfce !important;
+  color: #ffffff;
+}
+
+.txt-teal {
+  color: #43cfce !important;
+}
+/*# sourceMappingURL=style.css.map */

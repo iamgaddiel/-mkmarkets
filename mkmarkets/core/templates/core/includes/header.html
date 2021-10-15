@@ -1,0 +1,25 @@
+{% extends "core/base.html" %}
+{% block content %}
+    <header class="text-light py-3 bg-teal">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-sm-4 col-md-2">
+                    <span class="text-capitalize">{{ user.username }}</span>
+                    <a href="{% url 'core:logout' %}" class="ml-5">
+                        <i class="fa fa-power-off text-light"></i>
+                    </a>
+                </div>
+                <div class="col-sm-4 col-md-2">
+                    {% if user.is_superuser %}
+                    <a href="{% url 'core:admin_dashboard'%}" class="text-light mr-3">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                    </a>
+                    <a href="{% url 'core:user_created' %}" class="badge bg-default rounded-pill text-light nav-link text-end border">Create User</a>
+                    {% else %}
+                    <span class="text-capitalize badge bg-default rounded-pill text-light nav-link text-end border">Balance {{ user.profile.balance}}</span>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock content %}

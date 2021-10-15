@@ -1,0 +1,31 @@
+{% extends "core/base.html" %}
+{% block content %}
+<!-- header -->
+{% include "core/includes/header.html" %}
+
+<section class="form-wrapper" style="margin-top: -40px">
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-title d-flex justify-content-between align-items-center">
+            <a href="{% url 'core:admin_dashboard' %}" class="nav-link hover-overlay">
+                <i class="fa fa-arrow-circle-left fa-2x text-muted" aria-hidden="true"></i>
+            </a>
+            <h3 class="text-center text-muted">
+                Add User
+            </h3>
+        </div>
+        {{ form }}
+        <div class="form-group">
+            <label for="confirm_password">Confirm password</label>
+            <input type="password" name="password_confirm" placeholder="1234567890">
+            {% if confirm_err %}
+                <span class="text-danger">{{ confirm_err }}</span>
+            {% endif %}
+        </div>
+        <div class="form-group mt-4">
+            <input type="submit" value="Create User" class="btn bg-teal">
+        </div>
+    </form>
+</section>
+
+{% endblock content %}

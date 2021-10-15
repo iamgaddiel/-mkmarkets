@@ -8,12 +8,14 @@
     <link rel="stylesheet" href="{% static 'style/style.css' %}">
     <link rel="stylesheet" href="{% static 'vendors/bootstrap-5.0.1/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'vendors/bootstrap-5.0.1/css/bootstrap.min.css.map' %}">
+    <link rel="stylesheet" href="{% static 'vendors/fontawesome/css/all.css' %}">
+    
 
     <script src="{% static 'vendors/bootstrap-5.0.1/js/bootstrap.min.js' %}" defer></script>
     <script src="{% static 'vendors/bootstrap-5.0.1/js/bootstrap.js.map' %}" defer></script>
     <title>
         {% if title %}
-            { title }
+            {{ title }}
         {% else %}
             MKMARKETS
         {% endif %}

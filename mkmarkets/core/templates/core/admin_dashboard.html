@@ -1,0 +1,40 @@
+{% extends "core/base.html" %} {% block content %}
+<!-- header -->
+{% include "core/includes/header.html" %}
+
+<div class="container mt-5">
+  <h4 class="h4 text-muted"><i class="fa fa-users"></i> Users</h4>
+  <hr />
+
+  <ul class="list-group mt-4">
+    {% for object in object_list %} {% if object.username != user.username %}
+    <li
+      class="list-group-item d-flex justify-content-between align-items-center"
+    >
+      <div class="d-flex align-items-center">
+        {{ object.username }}
+        <a href="{% url 'core:user_update' object.pk %}" class="nav-link">
+          <span class="badge bg-teal rounded-pill">view</span>
+        </a>
+        <a href="{% url 'core:user_delete' object.pk %}" class="nav-link p-0">
+          <span class="badge bg-danger rounded-pill">
+            <i class="fa fa-trash" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+
+      <span class="badge bg-teal rounded-pill"
+        >balance {{ object.profile.balance }}</span
+      >
+    </li>
+    {% endif %} {% empty %}
+    <li
+      class="list-group-item d-flex justify-content-between align-items-center"
+    >
+      <h1>No registered users yet</h1>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% endblock content %}

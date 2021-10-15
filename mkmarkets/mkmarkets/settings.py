@@ -143,3 +143,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Login Reidrect
 LOGIN_REDIRECT_URL = "core:dispacher"
+LOOUT_REDIRECT_URL = "core:login"
