@@ -33,7 +33,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     "localhost",
-    "127.0.0.1"
+    "127.0.0.1",
+    'ae4b-197-210-227-224.ngrok.io',
+    'mkmarkets.xyz',
 ]
 
 
@@ -143,4 +145,16 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Login Reidrect
 LOGIN_REDIRECT_URL = "core:dispacher"
-LOOUT_REDIRECT_URL = "core:login"
+LOOUT_REDIRECT_URL = "core:index"
+
+
+# Telegram Session Paths
+TELEGRAM_SESSIONS_DIR = os.path.join(BASE_DIR, 'TelegramSessionFiles')
+TELEGRAM_APP_ID = env.get('TELEGRAM_APP_ID')
+TELEGRAM_HASH = env.get('TELEGRAM_HASH')
+
+
+# Lemon API
+LEMON_API_USERNAME = env.get('LEMON_API_USERNAME')
+LEMON_API_PSWD = env.get('LEMON_API_PSWD')
+

@@ -1,4 +1,17 @@
 {% extends "core/base.html" %}
+{% load static %}
 {% block content %}
-    <h1 class="text-danger">lkdjdflfkjdflkjslkf</h1>
+    <section class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+        <div class="hero-section">
+            <div class="hero-image">
+                <img src="{% static 'images/undraw_Online_messaging_re_qft3.svg' %}" alt="social media" lazy>
+            </div>
+            <h1 class="text-center mt-4" id="hero-text">mkmarkets</h1>
+            <span class="text-muted"><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, quia!</small></span>
+
+            <div class="hero-link  mt-3">
+                <a href="{% url 'core:login' %}" class="nav-link text-center txt-teal h4">Login</a>
+            </div>
+        </div>
+    </section>
 {% endblock %}

@@ -8,6 +8,8 @@ django = "*"
 telethon = "*"
 pillow = "*"
 cryptg = "*"
+python-socks = {extras = ["asyncio"], version = "*"}
+requests = "*"
 
 [dev-packages]
 

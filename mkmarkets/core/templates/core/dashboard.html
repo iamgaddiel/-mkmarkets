@@ -4,12 +4,16 @@
 
 <section class="container">
   <section class="form-wrapper" style="margin-top: -60px">
-    <form method="post" class="custom-form">
+    <form action="{% url 'core:user_dashboard' %}" method="post" class="custom-form" id="accountGenerateForm">
       {% csrf_token %}
-      <h3 class="text-center text-muted"></h3>
+      <h3 class="text-center text-muted">Generate Account</h3>
       {{ form }}
+      {% if error %}
+        <span class="text-danger"><small>{{ error }}</small></span>
+      {% endif %}
+      <span class="text-muted"><small>Enter number of account needed</small></span>
       <div class="form-group mt-4">
-        <input type="submit" value="Login" class="btn btn-block bg-teal" />
+        <input type="submit" value="Generate" class="btn btn-block bg-teal" />
       </div>
     </form>
   </section>

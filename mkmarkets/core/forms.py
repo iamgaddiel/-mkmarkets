@@ -23,3 +23,7 @@ class UserUpdateForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ['balance']
+
+
+class AccountGenerateForm(forms.Form):
+    accounts = forms.IntegerField()
